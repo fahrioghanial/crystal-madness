@@ -49,6 +49,9 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.vcxproj
+/Crystal Madness/
+/UnityPlayerStub/
 
 # Unity3D generated meta files
 *.pidb.meta
