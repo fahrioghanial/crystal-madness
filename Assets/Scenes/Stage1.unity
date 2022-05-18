@@ -15404,7 +15404,6 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652406177488}
   - component: {fileID: 919132148201391214}
-  - component: {fileID: 919132148201391215}
   - component: {fileID: 919132148201391211}
   - component: {fileID: 919132148201391213}
   - component: {fileID: 919132148201391212}
@@ -15415,8 +15414,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &919132148201391211
-MeshCollider:
+--- !u!136 &919132148201391211
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15425,10 +15424,10 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Radius: 2
+  m_Height: 12
+  m_Direction: 1
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!114 &919132148201391212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15480,24 +15479,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
---- !u!143 &919132148201391215
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148201391210}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.2
-  m_SlopeLimit: 52
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &920198511852782052
 Transform:
   m_ObjectHideFlags: 0
