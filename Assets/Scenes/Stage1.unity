@@ -1412,9 +1412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage:
-    baseValue: 0
+    baseValue: 100
   maxHealth: 100
-  health: 100
   walkSpeed: 5
   runSpeed: 10
   jumpSpeed: 10
@@ -16575,6 +16574,8 @@ GameObject:
   - component: {fileID: 919132148201391211}
   - component: {fileID: 919132148201391213}
   - component: {fileID: 919132148201391212}
+  - component: {fileID: 919132148201391215}
+  - component: {fileID: 919132148201391216}
   m_Layer: 8
   m_Name: monster
   m_TagString: Untagged
@@ -16639,7 +16640,7 @@ NavMeshAgent:
   m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0.3
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -16647,6 +16648,34 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
+--- !u!114 &919132148201391215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148201391210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf4529af23ac6b4cbc2022f6bd448ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atkSpeed: 1
+--- !u!114 &919132148201391216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148201391210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec975b8d18e22f438312f43db9d8908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage:
+    baseValue: 100
+  maxHealth: 100
 --- !u!4 &920198511852782052
 Transform:
   m_ObjectHideFlags: 0
