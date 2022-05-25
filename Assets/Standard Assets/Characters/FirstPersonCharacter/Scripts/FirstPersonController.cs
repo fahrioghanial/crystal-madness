@@ -269,5 +269,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		{
 			m_JumpSpeed = value;
 		}
+
+		public void unlockCursor()
+		{
+			m_MouseLook.lockCursor = false;
+		}
 	}
 }
