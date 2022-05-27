@@ -7,7 +7,7 @@ public class StageCompleteTrigger : MonoBehaviour
     {
         if (ScoringSystem.isAllCrystalCollected)
         {
-            SceneManager.LoadScene("Ending");
+            FindObjectOfType<GameManager>().SetStageCompleted();
         }
     }
 }

@@ -21,7 +21,7 @@ public class PlayerManager : MonoBehaviour
 
     public void KillPlayer()
     {
-        FindObjectOfType<GameOverMenu>().GameOver();
+        FindObjectOfType<GameManager>().SetGameIsOver();
         player.GetComponent<FirstPersonController>().unlockCursor();
         Time.timeScale = 1f;
     }
