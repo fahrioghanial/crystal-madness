@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028359, g: 0.22571385, b: 0.30692258, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1348,10 +1348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeea37e271e3c1e4caf9b3607e3f45f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 539941656}
-  cursorMode: 1
-  cursorTexture: {fileID: 0}
-  hotSpot: {x: 0, y: 0}
 --- !u!114 &194607794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11719,6 +11715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1628828410}
   - component: {fileID: 1628828409}
+  - component: {fileID: 1628828411}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -11753,6 +11750,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1628828411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628828408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f0ba95ad6164449938c98baecb64e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 539941656}
+  cursorMode: 1
+  cursorTexture: {fileID: 0}
+  hotSpot: {x: 0, y: 0}
 --- !u!1 &1650679276
 GameObject:
   m_ObjectHideFlags: 0
