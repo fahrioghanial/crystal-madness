@@ -8,6 +8,7 @@ public class PlayerStats : CharacterStats
     public float walkSpeed = 5f;
     public float runSpeed = 10f;
     public float jumpSpeed = 10f;
+    bool isAxePickedUp = false;
 
     void Update()
     {
@@ -16,6 +17,13 @@ public class PlayerStats : CharacterStats
         controller.setJumpSpeed(jumpSpeed);
         controller.setRunSpeed(runSpeed);
         controller.setWalkSpeed(walkSpeed);
+    }
+
+    public void setAxePickedUp(bool value) => isAxePickedUp = value;
+
+    public bool GetAxePickedUp()
+    {
+        return isAxePickedUp;
     }
 
     public override void Die()

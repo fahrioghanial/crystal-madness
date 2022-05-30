@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerManager : MonoBehaviour
 
     public void KillPlayer()
     {
-        SceneManager.LoadScene(2);
+        FindObjectOfType<GameManager>().SetGameIsOver();
+        player.GetComponent<FirstPersonController>().unlockCursor();
+        Time.timeScale = 1f;
     }
 }

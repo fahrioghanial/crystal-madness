@@ -13,14 +13,6 @@ public class CharacterStats : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    void Update()
-    {
-       if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(10);
-        } 
-    }
-
     public void TakeDamage(int damage)
     {
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
