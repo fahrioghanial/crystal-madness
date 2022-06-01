@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 10f;
+    public AudioSource screamSound;
 
     Transform target;
     NavMeshAgent agent;
@@ -27,9 +28,10 @@ public class EnemyController : MonoBehaviour
 
         if (distance <= lookRadius)
         {
+            screamSound.Play();
             agent.SetDestination(target.position);
 
-            if(distance <= agent.stoppingDistance)
+            if (distance <= agent.stoppingDistance)
             {
 
                 PlayerStats targetStats = target.GetComponent<PlayerStats>();
