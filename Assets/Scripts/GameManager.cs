@@ -59,6 +59,6 @@ public class GameManager : MonoBehaviour
 
     private void StageComplete()
     {
-        SceneManager.LoadScene("Ending");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
