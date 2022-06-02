@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 10f;
     public AudioSource screamSound;
+    private bool isEncountered = false;
     [SerializeField] private DontDestroy bgmRoot;
     [SerializeField] private AudioClip currentBGMStageAudioClip;
     [SerializeField] private AudioClip currentBGMStageAudioClipChase;
@@ -16,7 +17,7 @@ public class EnemyController : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
     Combat combat;
-    
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,11 @@ public class EnemyController : MonoBehaviour
         if (distance <= lookRadius)
         {
             screamSound.Play();
+            isEncountered = true;
+        }
+
+        if (isEncountered)
+        {
             agent.SetDestination(target.position);
 
             if (distance <= agent.stoppingDistance)
@@ -45,8 +51,6 @@ public class EnemyController : MonoBehaviour
                 }
 
                 FaceTarget();
-
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
 
