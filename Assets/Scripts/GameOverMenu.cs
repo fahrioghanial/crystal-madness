@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
-    
+    [SerializeField] private DontDestroy bgmRoot;
     public void Restart() => SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-    public void ToMainMenu() => SceneManager.LoadScene("MainMenu");
+    public void ToMainMenu()
+    {
+        bgmRoot = GameObject.FindWithTag("BGM").GetComponent<DontDestroy>();
+        bgmRoot.StopBGM();
+        SceneManager.LoadScene("MainMenu");
+    }
 }

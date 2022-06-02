@@ -8,6 +8,10 @@ public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 10f;
     public AudioSource screamSound;
+    [SerializeField] private DontDestroy bgmRoot;
+    [SerializeField] private AudioClip currentBGMStageAudioClip;
+    [SerializeField] private AudioClip currentBGMStageAudioClipChase;
+    [SerializeField] private bool nearToken = false;
 
     Transform target;
     NavMeshAgent agent;
@@ -44,6 +48,19 @@ public class EnemyController : MonoBehaviour
 
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
+        }
+
+        if (distance <= 3 * lookRadius && nearToken == false)
+        {
+            bgmRoot = GameObject.FindWithTag("BGM").GetComponent<DontDestroy>();
+            bgmRoot.ChangeBGM(currentBGMStageAudioClipChase);
+            nearToken = true;
+        }
+        else if (distance > 3 * lookRadius && nearToken == true)
+        {
+            bgmRoot = GameObject.FindWithTag("BGM").GetComponent<DontDestroy>();
+            bgmRoot.ChangeBGM(currentBGMStageAudioClip);
+            nearToken = false;
         }
     }
 

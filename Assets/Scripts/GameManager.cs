@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject gameOverUI;
+    [SerializeField] private DontDestroy bgmRoot;
     public CursorMode cursorMode = CursorMode.ForceSoftware;
     public Texture2D cursorTexture;
     public Vector2 hotSpot = Vector2.zero;
+    [SerializeField] private AudioClip currentBGMStageAudioClip;
 
     private bool isGameOver;
     private bool isPaused;
@@ -17,6 +19,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bgmRoot = GameObject.FindWithTag("BGM").GetComponent<DontDestroy>();
+        bgmRoot.ChangeBGM(currentBGMStageAudioClip);
         ScoringSystem.collectedCrystals = 0;
         Time.timeScale = 1f;
         isGameOver = false;
@@ -59,6 +63,7 @@ public class GameManager : MonoBehaviour
 
     private void StageComplete()
     {
+        bgmRoot.StopBGM();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

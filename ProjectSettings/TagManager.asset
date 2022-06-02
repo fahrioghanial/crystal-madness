@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Shootable
+  - SFXSliderObject
+  - BGMSliderObject
+  - BGM
+  - SFX
   layers:
   - Default
   - TransparentFX
